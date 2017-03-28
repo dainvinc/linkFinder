@@ -32,8 +32,8 @@ for link in input_txt:
                 try:
                         urllib.urlretrieve(link, 'static/images/'+filename)
                 except IOError:
-                        print 'yeah'
+                        print 'Image has been downloaded'
         else:
-                print 'not found'
+                print 'Image not found'
         
 input_txt.close()
