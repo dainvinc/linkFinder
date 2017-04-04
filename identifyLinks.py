@@ -10,8 +10,10 @@ webpage = urllib2.urlopen(input_link)
 #html = response.content
 print webpage
 soup = BeautifulSoup(webpage)
-
+count = 0;
 for link in soup.findAll('a'):
-    if(link.get('href').startswith("https://maps")):
-        print 'These are the links which you\'ve asked for:'
+    if(link.get('href')):
+        count = count +1;
         print link
+
+print "%d links found" %(count);
